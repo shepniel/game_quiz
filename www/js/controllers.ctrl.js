@@ -86,37 +86,37 @@ angular.module('data',[])
   var id;
    var pendejadas2 = [
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'https://pbs.twimg.com/profile_images/669514396222160897/2215gjsd.png',     
       answer: 'bulbasour'
     },
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'http://vignette1.wikia.nocookie.net/es.pokemon/images/5/56/Charmander.png?cb=20140207202456',     
       answer: 'charmander'
     },
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'https://pbs.twimg.com/profile_images/669519360344526848/SPfSzuWv.png',     
       answer: 'squirtle'
     },
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'http://vignette3.wikia.nocookie.net/es.pokemon/images/c/c4/Rattata.png?cb=20080723091810',     
       answer: 'rattata'
     },
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'http://vignette3.wikia.nocookie.net/es.pokemon/images/8/8d/Vulpix.png?cb=20080909115229',     
       answer: 'vulpix'
     },
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'http://vignette1.wikia.nocookie.net/es.pokemon/images/b/bf/Machamp.png?cb=20080909112704',     
       answer: 'machamp'
     },
     {  
-      name: 'Whos thats pokemon?',     
+      name: 'Who\'s thats pokemon?',     
       cover: 'http://vignette3.wikia.nocookie.net/es.pokemon/images/9/98/Tauros.png?cb=20080909115022',     
       answer: 'tauros'
     }
@@ -127,17 +127,21 @@ angular.module('data',[])
     id = parseInt($stateParams.id);
     console.log(id);
     $scope.yayi2 = pendejadas2 [id];
-    console.log($scope.yayi2)
+    console.log($scope.yayi2);
+    $scope.score=window.localStorage.getItem("score")?parseInt(window.localStorage.getItem("score")) : 0;
+
+
+
   })
+
   
   $scope.compare2 = function(){
     $scope.result = angular.equals($scope.user2.name,pendejadas2[id].answer);
       if ($scope.result) {
         var index = id+1;
-        window.localStorage.setItem("score",1);
-         $scope.loadData = function(){
-      alert(parseInt(window.localStorage.getItem("score")));  
-  }
+        $scope.score++;
+        window.localStorage.setItem("score",$scope.score);
+
         //var punta = parseInt(localStorage.getItem("score"))+1;
 
         if (index==pendejadas2.length) {
@@ -148,6 +152,8 @@ angular.module('data',[])
         }
       }else{
               //var punta = parseInt(localStorage.getItem("score"))-1;
+               $scope.score--;
+              window.localStorage.setItem("score",$scope.score);
               var index = id+1;
               $state.go('app.activity2', {id: index});
       }

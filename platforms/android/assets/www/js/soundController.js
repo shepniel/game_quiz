@@ -36,3 +36,4 @@ function SoundController($ionicPlatform, $timeout, $cordovaNativeAudio) {
 
     return vm;
 }
+

@@ -6,22 +6,18 @@
 
 <ion-content ng-controller="SoundController as vm">
 <br>
-        <p class="text-center"><button ng-click="vm.play('snare')" class="button icon-left ion-play button-energized">Play Song</button></p>
- <div class="list">
+    <p class="text-center"><button ng-click="vm.play('snare')" class="button icon-left ion-play button-energized">Play Song</button></p>
+    <div class="list" ng-controller="PopupCtrl">
 
-    <a class="item item-thumbnail-left" ui-sref="app.login">
-      <img src="https://tcrf.net/images/3/32/DKCTitle.png">
-      <h2>Donkey Kong</h2>
-      <p>RareWare</p>
-    </a>
-    <a class="item item-thumbnail-left" href="#" onclick="myFunction()">
-      <img src="http://www.iconarchive.com/download/i27144/ph03nyx/super-mario/Mushroom-Life.ico">
-      <h2>Mario</h2>
-      <p>Nintendo EAD</p>
-      <script>
-function myFunction() {
-    alert("La regaste");
-}
+        <a class="item item-thumbnail-left" ui-sref="app.login">
+          <img src="https://tcrf.net/images/3/32/DKCTitle.png">
+          <h2>Donkey Kong</h2>
+          <p>RareWare</p>
+        </a>
+        <a class="item item-thumbnail-left" href="#" ng-click="showAlert()">
+          <img src="http://www.iconarchive.com/download/i27144/ph03nyx/super-mario/Mushroom-Life.ico">
+          <h2>Mario</h2>
+          <p>Nintendo EAD</p>
 </script>
     </a>
     <a class="item item-thumbnail-left" href="#">

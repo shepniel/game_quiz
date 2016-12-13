@@ -1,7 +1,7 @@
 <ion-view view-title="Game!">
     <ion-content>
         <div class="item item-body">    
-                    <h1 class="text-success text-center">{{yayi2.name}}</h1>
+                    <h1 class="text-primary text-center">{{yayi2.name}}</h1>
                     <div><h1 class="text-center"><img ng-src="{{yayi2.cover}}" alt="{{yayi2.name}}"></h1></div>
                    <form novalidate>
                      <h3></h3>
@@ -10,7 +10,7 @@
                                 <input type="text" ng-model="user2.name" class="form-control" aria-describedby="emailHelp" placeholder="Whose is this hat">
                         </div>
                         <button class="button button-block button-positive" value="Compare" ng-click="compare2()"> Check</button>
-                        Equal: <pre>{{result}}</pre>
+                        Equal: <pre>{{score}}</pre>
                     </form>
                 </div>
     </ion-content>

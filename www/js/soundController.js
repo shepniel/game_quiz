@@ -15,9 +15,9 @@ angular.module('soundController',[])
 //     }
  
 // });
-.controller('SoundController', ['$ionicPlatform', '$timeout',  '$cordovaNativeAudio', SoundController]);
+//.controller('SoundController', ['$ionicPlatform', '$timeout',  '$cordovaNativeAudio', SoundController]);
 
-function SoundController($ionicPlatform, $timeout, $cordovaNativeAudio) {  
+/*function SoundController($ionicPlatform, $timeout, $cordovaNativeAudio) {  
     var vm = this;
 
     $ionicPlatform.ready(function() {
@@ -35,4 +35,5 @@ function SoundController($ionicPlatform, $timeout, $cordovaNativeAudio) {
     };
 
     return vm;
-}
+}*/
+
