@@ -1,0 +1,19 @@
+<ion-view view-title="Game!">
+    <ion-content>
+    
+        <div class="item item-body">    
+                    <h1 class="text-success text-center">{{yayi.name}}</h1>
+                    <div><h1 class="text-center"><img ng-src="{{yayi.cover}}" alt="{{yayi.name}}"></h1></div>
+                   <form novalidate>
+                     <h3></h3>
+                       <div class="col-md-12 form-group">
+                       <h3>Type your answer</h3>
+                                <input type="text" ng-model="user1.name" class="form-control" aria-describedby="emailHelp" placeholder="Whose is this hat">
+                        </div>
+                        <button class="button button-block button-positive" value="Compare" ng-click="compare()"> Check</button>
+                        Equal: <pre>{{result}}</pre>
+                    </form>
+                </div>
+                
+    </ion-content>
+</ion-view>
